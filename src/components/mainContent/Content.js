@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Content.css";
 import axios from "axios";
 
-//    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
+//
 
 const Content = () => {
   const [products, setProducts] = useState([]);
