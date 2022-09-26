@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 const Nav = () => {
   return (
     <>
-      <nav className="flex justify-between items-center p-3">
+      <nav className="bg-violet-200 flex justify-between items-center p-3 sticky top-0">
         <ul>
           <li>some categories</li>
         </ul>

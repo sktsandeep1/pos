@@ -11,7 +11,7 @@ import { FaStickyNote } from "react-icons/fa";
 const SideBarLeft = () => {
   return (
     <>
-      <div className=" h-screen bg-violet-800 text-violet-200 ">
+      <div className="w-full h-screen bg-violet-800 text-violet-200 sticky top-0">
         <div className="top-section ">
           <div className="category flex items-center gap-3">
             <h1 className="font-bold text-xl pl-5 py-3">Categories</h1>
@@ -55,7 +55,7 @@ const SideBarLeft = () => {
         </div>
         <hr className="w-4/5 m-auto mt-4" />
         <div className="last-section font-bold text-lg mt-4">
-          <div className="loyaltyPoint cursor-pointer flex items-center pl-3 pt-2 pb-2 gap-2 hover:bg-violet-900 ">
+          <div className="loyaltyPoint cursor-pointer flex items-center pl-3  pt-2 pb-2 gap-2 hover:bg-violet-900 ">
             <FaGift />
             <h3>Loyalty Points</h3>
           </div>

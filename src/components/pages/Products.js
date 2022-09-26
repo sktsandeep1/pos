@@ -24,15 +24,15 @@ const Products = () => {
   };
   return (
     <>
-      <div className="max-w-full bg-violet-200">
+      <div className="max-w-full ">
         <Nav />
-        <div className="max-w-full grid grid-cols-6 gap-3 bg-violet-300 p-2">
-          {products.splice(0, 8).map((product) => {
+        <div className="max-w-full grid grid-cols-6 gap-3 p-2">
+          {products.map((product) => {
             const { id } = product;
             return (
               <div
                 key={id}
-                className="bg-violet-400 bg-violet-400 hover:bg-violet-500 cursor-pointer rounded"
+                className=" bg-violet-400 hover:bg-violet-500 cursor-pointer rounded"
               >
                 <img
                   className="w-full rounded h-40"
@@ -40,10 +40,10 @@ const Products = () => {
                   alt=""
                 />
                 <div className="product-details">
-                  <p className=" text-center text-sm font-bold py-1">
+                  <p className=" text-center text-sm font-bold pt-1">
                     {truncate(product?.title, 15)}
                   </p>
-                  <p className="text-center py-1">
+                  <p className="text-xs text-center pb-1">
                     <span>Price : </span>
                     <span>{"$" + product.price}</span>
                   </p>
