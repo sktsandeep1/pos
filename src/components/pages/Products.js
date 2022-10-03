@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "./Nav";
+
+// import { CartContext } from "../context/CartContext";
+
 const Products = () => {
+  // const { cart, setCart } = useContext(CartContext);
   const [products, setProducts] = useState([]);
 
   const productData = async () => {
     const request = await axios.get("https://fakestoreapi.com/products");
     setProducts(request.data);
-    console.log(request.data);
   };
 
   useEffect(() => {
@@ -19,9 +22,31 @@ const Products = () => {
     //     console.log(products);
     //   });
   }, []);
+
   const truncate = (str, n) => {
     return str?.length > n ? str.substr(0, n - 1) + "" : str;
   };
+
+  // const addToCart = (e, product) => {
+  //   let _cart = { ...cart };
+
+  //   if (!_cart.items) {
+  //     _cart.items = {};
+  //   }
+
+  //   if (_cart.items[product.id]) {
+  //     _cart.items[product.id] += 1;
+  //   } else {
+  //     _cart.items[product.id] = 1;
+  //   }
+
+  //   if (!_cart.totalItems) {
+  //     _cart.totalItems = 0;
+  //   }
+  //   _cart.totalItems += 1;
+  //   setCart(_cart);
+  // };
+
   return (
     <>
       <div className="max-w-full ">
@@ -31,7 +56,7 @@ const Products = () => {
             const { id } = product;
             return (
               <div
-                key={id}
+                key={product.id}
                 className=" bg-violet-400 hover:bg-violet-500 cursor-pointer rounded"
               >
                 <img

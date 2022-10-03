@@ -1,8 +1,10 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { IoMdBarcode } from "react-icons/io";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaHandHolding, FaShoppingCart } from "react-icons/fa";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { FaPause } from "react-icons/fa";
+
 const R_nav = () => {
   return (
     <>
@@ -26,12 +28,24 @@ const R_nav = () => {
           <li className="cursor-pointer">
             <IoMdBarcode />
           </li>
-          <li className="cursor-pointer">
-            <FaPause />
+          <li className="cursor-pointer ring-2 ring-black rounded-full p-2">
+            <div>
+              <FaPause />
+              <span className="absolute top-7 right-14 text-sm text-white text-center font-bold rounded-full bg-violet-800 w-7 h-7 p-1">
+                0
+              </span>
+            </div>
           </li>
-          <li className="cursor-pointer">
-            <FaShoppingCart />
+          {/* <Link to="/#R_Cart"> */}
+          <li className="cursor-pointer ring-2 ring-black rounded-full p-2">
+            <div>
+              <FaShoppingCart />
+              <span className=" absolute top-7 right-1 text-sm text-white text-center font-bold rounded-full bg-violet-800 w-7 h-7 p-1">
+                0
+              </span>
+            </div>
           </li>
+          {/* </Link> */}
         </ul>
       </nav>
     </>

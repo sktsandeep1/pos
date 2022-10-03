@@ -15,7 +15,7 @@ const SideBarLeft = () => {
         <div className="top-section ">
           <div className="category flex items-center gap-3">
             <h1 className="font-bold text-xl pl-5 py-3">Categories</h1>
-            <BiCategory className="" />
+            <BiCategory />
           </div>
           <ul className="categories ">
             <li className="cursor-pointer text-lg pl-8 pt-2 pb-2 hover:bg-violet-900">

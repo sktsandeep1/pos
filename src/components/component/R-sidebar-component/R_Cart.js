@@ -4,7 +4,7 @@ import { FaMinusCircle } from "react-icons/fa";
 const R_Cart = () => {
   return (
     <>
-      <div className="flex justify-around items-center ">
+      <div className="flex justify-around items-center pb-2" id="R_Cart">
         <img className="w-10" src="/images/logo.png" alt="img" />
         <small className="text-center">
           <span className="text-sm font-bold block"> Salad</span>
